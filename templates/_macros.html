@@ -1,0 +1,11 @@
+{% macro email(email) %}
+{%- set base64_email = email -%}
+<a class="js m-protected-mod" href="#{{ base64_email | base64_encode }}" target="_blank" title="Mail"><span class="js m-protected-mod-innertext">#{{ base64_email | base64_encode }}</span></a>
+{# After changing this you need to run `npm run noswitchernosearch` #}
+{% endmacro email %}
+
+{% macro email_button(email,text,classes) %}
+{%- set base64_email = email -%}
+<a class="js m-protected-mod {{ classes }}" href="#{{ base64_email | base64_encode }}" target="_blank" title="Mail">{{ text }}</a>
+{# After changing this you need to run `npm run noswitchernosearch` #}
+{% endmacro email %}

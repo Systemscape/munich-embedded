@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="100" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="2"/>
+
+  <!-- Person silhouette -->
+  <g fill="#9ca3af">
+    <!-- Head -->
+    <circle cx="100" cy="75" r="25"/>
+
+    <!-- Body -->
+    <ellipse cx="100" cy="140" rx="35" ry="45"/>
+  </g>
+
+  <!-- Microphone -->
+  <g fill="#374151" stroke="#374151" stroke-width="1">
+    <!-- Microphone body -->
+    <rect x="135" y="85" width="8" height="20" rx="4"/>
+
+    <!-- Microphone stand -->
+    <line x1="139" y1="105" x2="139" y2="125" stroke-width="2"/>
+
+    <!-- Base -->
+    <ellipse cx="139" cy="125" rx="8" ry="3"/>
+  </g>
+
+  <!-- Sound waves -->
+  <g fill="none" stroke="#6b7280" stroke-width="2" opacity="0.6">
+    <path d="M 145 90 Q 155 95 145 100"/>
+    <path d="M 148 87 Q 162 95 148 103"/>
+    <path d="M 151 84 Q 169 95 151 106"/>
+  </g>
+</svg>

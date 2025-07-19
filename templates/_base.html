@@ -1,0 +1,36 @@
+{% import "_macros.html" as macros %}
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-50">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Munich Embedded 2025</title>
+        <link href="/fonts/fonts.css" rel="stylesheet" integrity="sha384-{{ get_hash(path='fonts/fonts.css', sha_type=384, base64=true) | safe }}">
+        <link href="/css/style.css" rel="stylesheet" integrity="sha384-{{ get_hash(path='css/style.css', sha_type=384, base64=true) | safe }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <script defer src="/js/email-mod.js" integrity="sha384-{{ get_hash(path='js/email-mod.js', sha_type=384, base64=true) | safe }}"></script>
+        <script defer src="https://pirsch.joel-1a0.workers.dev/static/files/pa.js" id="pianjs" data-hit-endpoint="https://pirsch.joel-1a0.workers.dev/p/pv" data-event-endpoint="https://pirsch.joel-1a0.workers.dev/p/e" data-session-endpoint="https://pirsch.joel-1a0.workers.dev/p/s"></script>
+        <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Munich Embedded",
+            "alternateName": ["ME", "Munich Embedded Conference"],
+            "url": "https://www.munich-embedded.com/"
+          }
+        </script>
+        <script>
+          /*to prevent Firefox FOUC, this must be here*/
+          let FF_FOUC_FIX;
+        </script>
+    </head>
+
+
+    {% block content %}
+    {% endblock %}
+
+</html>

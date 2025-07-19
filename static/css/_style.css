@@ -1,0 +1,136 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-*: initial;
+  --font-body:
+    Inter, ui-sans-serif, system-ui, -apple-system, system-ui, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --font-sans:
+    Inter, ui-sans-serif, system-ui, -apple-system, system-ui, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono,
+    Courier New, monospace;
+
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+  --color-primary-950: #172554;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Add some padding between subsequent paragraphs*/
+  p+p {
+    padding-top: 0.5em;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-center;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold mb-3 mt-5;
+  }
+
+  a {
+    @apply text-blue-600 hover:text-blue-800;
+  }
+
+  p {
+    @apply mb-2;
+  }
+
+  ul {
+    @apply list-disc ml-6;
+  }
+
+  header {
+    @apply bg-white shadow-md;
+  }
+
+  footer {
+    @apply bg-white shadow-[0px_-4px_6px_-1px_rgba(0,0,0,0.1)] py-8 mt-auto;
+  }
+
+  input,
+  textarea {
+    @apply block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 focus:border-primary-600 focus:ring-primary-600 focus:outline-hidden;
+  }
+
+  #schedule {
+      a { @apply text-black hover:text-blue-800}
+  }
+}
+
+@utility text-onmcu-orange {
+  @apply text-orange-500;
+}
+
+@utility bg-onmcu-orange {
+  @apply bg-orange-500;
+}
+
+@utility bg-onmcu-orange-dark {
+  @apply bg-orange-600;
+}
+
+@utility button {
+  @apply text-center text-lg font-semibold inline-block rounded-lg py-3 px-6 hover:scale-105 transition-all duration-300 ease-in-out
+}
+
+
+@layer components {
+  a.orange-link {
+    @apply text-onmcu-orange;
+  }
+
+  .orange-button {
+    @apply button bg-onmcu-orange-dark hover:bg-onmcu-orange text-white hover:text-white;
+  }
+
+  .blue-button {
+    @apply button bg-indigo-600 hover:bg-indigo-500 text-white hover:text-white;
+  }
+
+  .highlighted-grid-element {
+    @apply bg-white rounded-xl shadow-lg p-8 border border-gray-100 hover:border-orange-500 transform hover:-translate-y-1 transition-all duration-300;
+  }
+
+  .error-message {
+    @apply text-red-600 mt-2 text-sm hidden;
+  }
+
+  .input-error {
+    @apply border-red-600;
+  }
+}
