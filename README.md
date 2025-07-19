@@ -2,10 +2,9 @@
 
 ## Requirements
 
-- Static Site Generator: Zola v0.20.2 https://github.com/getzola/zola/releases/tag/v0.20.0
+- Static Site Generator: Zola v0.20.2 https://www.getzola.org/documentation/getting-started/installation
 - CSS Framework: tailwindcss v4.1.10 https://tailwindcss.com/docs/installation/tailwind-cli (can be installed via brew)
 - Optional: Just command runner https://github.com/casey/just
-
 
 ## Building the Site
 
