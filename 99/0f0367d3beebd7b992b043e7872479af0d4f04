@@ -1,0 +1,21 @@
+templates/index_en.html
+  s_abfe49092c75be::t_426fa4e4156d37 437-450
+templates/index.html
+  s_abfe49092c75be::t_4816f0db68d5e2 353-364
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.4",
+  "base_commit_sha": "990f0367d3beebd7b992b043e7872479af0d4f04",
+  "prompts": {},
+  "sessions": {
+    "s_abfe49092c75be": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "af69aa6b-51eb-4469-b946-10d4c3dde5b5",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "JuliDi <julian@systemscape.de>"
+    }
+  }
+}
