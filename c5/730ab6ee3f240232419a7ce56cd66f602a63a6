@@ -1,0 +1,33 @@
+templates/index_en.html
+  s_abfe49092c75be::t_3f555e2c61ef20 507-520
+templates/index.html
+  s_abfe49092c75be::t_179c3c10835cf4 413-424
+static/css/style.css
+  s_7f7bbcf666cc16::t_346ac503598e41 1,89,141,264,505-508,510-513,515-520,522-523,699-700,834-839,841-842,844-845,847-848,850-852,854-858,860-861,863-864,866-867,869-870,872-874,876-878,881-882,886-887,890,893,896,899-900,902,905,908,911,914,918,922,927-928,931,934,937,940,943,946,1047-1051
+static/sponsor_logos/microconsult.svg
+  s_7f7bbcf666cc16::t_c0be836efd5c1d 1-129
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.18",
+  "base_commit_sha": "c5730ab6ee3f240232419a7ce56cd66f602a63a6",
+  "prompts": {},
+  "sessions": {
+    "s_7f7bbcf666cc16": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "759f5fe4-6bcd-48ba-92a0-7d4a36d14f45",
+        "model": "claude-opus-5"
+      },
+      "human_author": "JuliDi <julian@systemscape.de>"
+    },
+    "s_abfe49092c75be": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "af69aa6b-51eb-4469-b946-10d4c3dde5b5",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "JuliDi <julian@systemscape.de>"
+    }
+  }
+}
