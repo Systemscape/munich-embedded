@@ -1,5 +1,48 @@
 {% extends "_base.html" %}
 
+{% block page_title %}Munich Embedded 2026 – Embedded Testing & Security Conference | Oct 27, 2026, Munich{% endblock %}
+{% block og_title %}Munich Embedded 2026 – Embedded Testing & Security Conference | Oct 27, 2026, Munich{% endblock %}
+{% block twitter_title %}Munich Embedded 2026 – Embedded Testing & Security Conference | Oct 27, 2026, Munich{% endblock %}
+
+{% block event_jsonld %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Munich Embedded 2026",
+        "description": "Conference for testing, security and reliability in embedded systems. Talks, lightning talks and networking with around 100 embedded experts.",
+        "startDate": "2026-10-27T16:00:00+01:00",
+        "endDate": "2026-10-27T21:00:00+01:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "inLanguage": "en",
+        "location": {
+          "@type": "Place",
+          "name": "WERK1",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Am Kartoffelgarten 14",
+            "postalCode": "81671",
+            "addressLocality": "München",
+            "addressCountry": "DE"
+          }
+        },
+        "image": ["https://www.munich-embedded.com/logo_munich_embedded.png"],
+        "organizer": {
+          "@type": "Organization",
+          "name": "Systemscape GmbH",
+          "url": "https://www.systemscape.com/"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://tickets.munich-embedded.com",
+          "availability": "https://schema.org/InStock"
+        },
+        "url": "https://www.munich-embedded.com/en/"
+      }
+    </script>
+{% endblock %}
+
 {% block content %}
     <!-- Hero Section -->
     <section class="bg-blue-900 text-white">
