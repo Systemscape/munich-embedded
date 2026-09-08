@@ -1,0 +1,35 @@
+content/newsletter.md
+  s_4934de311dcf29::t_18fe731e1daf00 10
+  s_4934de311dcf29::t_f6182016fa3aef 16
+  s_4934de311dcf29::t_10646f4ea23f02 3,8,19-21
+  s_4934de311dcf29::t_3a7407c8a6949d 6-7,9,11-15,18,22-24
+  s_4934de311dcf29::t_7eeecceb6ee2bc 17
+static/css/style.css
+  s_4934de311dcf29::t_18fe731e1daf00 36,446-447
+  s_4934de311dcf29::t_7407f31f752d69 371-373,407-409,425-427,448,467-469,624-626,789-791
+templates/newsletter.html
+  s_4934de311dcf29::t_f43faee9546446 6-7,9
+  s_4934de311dcf29::t_18fe731e1daf00 8
+content/newsletter.en.md
+  s_4934de311dcf29::t_f6182016fa3aef 16
+  s_4934de311dcf29::t_47c446815682c5 3,8,19-21
+  s_4934de311dcf29::t_7882c5d89e2306 6-7,9,11-15,18,22-24
+  s_4934de311dcf29::t_18fe731e1daf00 10
+  s_4934de311dcf29::t_feda685f5d6d1a 17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "5be6a3cd2c7554f2fef90ff6bdc983f18fb1171c",
+  "prompts": {},
+  "sessions": {
+    "s_4934de311dcf29": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "981d5849-eac3-48f5-a93f-ae02cdee9cb2",
+        "model": "claude-opus-5"
+      },
+      "human_author": "JuliDi <julian@systemscape.de>"
+    }
+  }
+}
