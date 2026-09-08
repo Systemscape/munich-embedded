@@ -1,0 +1,56 @@
+templates/components/social.html
+  s_4934de311dcf29::t_565100c984f73c 1-9
+templates/components/talks.html
+  s_4934de311dcf29::t_452e67eca011e3 1-16
+templates/index_en.html
+  s_4934de311dcf29::t_e09afd7a9a7a88 254-257,259-261,263-266,268-269,271-273,275-278,280-283,285-287,294-295,297-301,303-304,306-308,310-313,315-318,325-328,330-332,334-338,340-341,343-346,348-352,359-362,364-368,370-371,373-389,396-399,401-405,407-408,410-412,414-417,419-422
+  s_4934de311dcf29::t_0f040b3436d8fd 448
+  s_4934de311dcf29::t_527f70b5082382 323,354
+  s_4934de311dcf29::t_452e67eca011e3 252,289,292,320,357,391,394,424
+templates/archive_2025.html
+  s_4934de311dcf29::t_0f040b3436d8fd 198
+  s_4934de311dcf29::t_452e67eca011e3 72,90,92,110,112,135,137,158,160,188
+  s_4934de311dcf29::t_e09afd7a9a7a88 73-79,81-89,93-108,113-122,124-134,138-156,161-172,174-187
+templates/components/layout.html
+  s_4934de311dcf29::t_e09afd7a9a7a88 21,57
+templates/components/cards.html
+  s_4934de311dcf29::t_e1c71520dd141d 7
+  s_4934de311dcf29::t_9161a05b68545c 1-6,8-10
+templates/components/sponsors.html
+  s_4934de311dcf29::t_0f040b3436d8fd 1-40
+templates/components/icons.html
+  s_4934de311dcf29::t_e3ac5ec082558b 1-7,11-13,17-19,23-25,29-31,35
+  s_4934de311dcf29::t_e09afd7a9a7a88 8-10,14-16,20-22,26-28,32-34
+  s_4934de311dcf29::t_9161a05b68545c 36-46
+templates/community.html
+  s_4934de311dcf29::t_6ca7cc869b0768 6,10-11,13,15-16,18,20-21,23-24,26-27,29,32,34-36
+  s_4934de311dcf29::t_e09afd7a9a7a88 19,22,25,28,31
+  s_4934de311dcf29::t_b2c265db8e5cfe 30
+templates/index.html
+  s_4934de311dcf29::t_e09afd7a9a7a88 230-239,241-255,259-263,265-276,280-298,303-309,311-326,330-336,338-349
+  s_4934de311dcf29::t_452e67eca011e3 229,256,258,277,302,327,329,350
+  s_4934de311dcf29::t_527f70b5082382 279,300
+  s_4934de311dcf29::t_0f040b3436d8fd 369
+templates/_base.html
+  s_4934de311dcf29::t_e09afd7a9a7a88 12
+templates/archive_2025_en.html
+  s_4934de311dcf29::t_0f040b3436d8fd 198
+  s_4934de311dcf29::t_452e67eca011e3 72,90,92,110,112,135,137,158,160,188
+  s_4934de311dcf29::t_e09afd7a9a7a88 73-79,81-89,93-108,113-122,124-134,138-156,161-172,174-187
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "c3526686646e77624332d9182743c9bc6dc8662d",
+  "prompts": {},
+  "sessions": {
+    "s_4934de311dcf29": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "981d5849-eac3-48f5-a93f-ae02cdee9cb2",
+        "model": "claude-opus-5"
+      },
+      "human_author": "JuliDi <julian@systemscape.de>"
+    }
+  }
+}
