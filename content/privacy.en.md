@@ -50,6 +50,14 @@ The processing of the data specified in this section is neither legally nor cont
 
 Cloudflare has implemented compliance measures for international data transfers. These apply to all worldwide activities where Cloudflare processes personal data of natural persons in the EU. These measures are based on the EU Standard Contractual Clauses (SCCs) and participation in the EU-US Data Privacy Framework. For more information, visit: [https://www.cloudflare.com/cloudflare_customer_SCCs.pdf](https://www.cloudflare.com/cloudflare_customer_SCCs.pdf)
 
+## Analytics
+
+For web analytics, we use Pirsch Analytics. The provider is Emvi Software GmbH, Nickelstraße 1b, 33378 Rheda-Wiedenbrück, Germany. The data is processed on servers in Germany; no data transfer to third countries takes place. The analytics script and the measurement requests are served via a Cloudflare Worker operated by us.
+
+Pirsch Analytics is a cookie-free web analytics software that was developed according to the Privacy by Design principle. To analyze visitor flows, Pirsch Analytics uses a hashing algorithm to generate a 16-digit number as the visitor ID when the page request is received. The input values are the IP address, the user agent, the date and a salt. The visitor's IP address is not persisted in whole or in part, and is anonymized completely and non-reversibly by the hash. The inclusion of the date and the use of one salt per website ensures that website visitors cannot be recognized for more than 24 hours and cannot be tracked across multiple websites. A rough localization (country/city) is performed via a locally integrated database.
+
+The processing is based on our legitimate interest pursuant to Art. 6(1)(f) GDPR in a statistical evaluation of the use of our website. You have the right to object to the processing. For more information on data protection at Pirsch Analytics, see: [https://pirsch.io/privacy](https://pirsch.io/privacy)
+
 ## Map Display with OpenStreetMap
 
 On our ecosystem page, we use an interactive map that loads map tiles from the German OpenStreetMap tile server (`tile.openstreetmap.de`). This server is operated by FOSSGIS e.V. (a registered association based in Germany). When loading the map tiles, your IP address is transmitted to the servers of FOSSGIS e.V. No data transfer to third countries takes place.
@@ -80,17 +88,17 @@ We assume that this exception applies to Cloudflare Pages.
 
 When you subscribe to our newsletter, your information from the registration form is sent to the data controller. Registration for the newsletter uses a double opt-in procedure, which means that after registration you will receive an email to confirm your registration. This confirmation is required to prevent registration with a foreign email address. At the time of newsletter registration, the IP address and the time of registration are stored to prevent possible misuse. Your data will not be passed on to third parties unless there is a legal obligation to do so. The data is used exclusively for sending the newsletter. The subscription can be terminated at any time, and consent to store the data can be withdrawn. For this purpose, there is a corresponding unsubscribe link in every newsletter. The legal basis for data processing after newsletter registration is based on your consent according to Art. 6(1)(a) GDPR and for sending newsletters in the context of selling goods or services on § 7(3) UWG.
 
-### Use of Clever Elements
+### Use of Buttondown
 
-**Purpose and Description:** Clever Elements is used for sending newsletters. The service provider is Clever Elements GmbH, Lohmühlenstr. 65, 12435 Berlin, Germany. Clever Elements is used to organize newsletter sending and its analysis. The data provided for the newsletter is stored on Clever Elements servers in Germany. If you do not want the analysis by Clever Elements, you can unsubscribe from the newsletter or inform us so that we do not use personal tracking. An unsubscribe link is included in every newsletter. Emails sent via Clever Elements contain a tracking pixel that connects to the servers when opened, so it can be determined whether an email has been opened. Furthermore, we can determine which links in the newsletter are clicked. Links can be configured as tracking links to capture clicks.
+**Purpose and Description:** We use Buttondown to send our newsletter. The service provider is Buttondown, LLC, 406 W Franklin St. #201, Richmond, VA 23221, USA. Buttondown is used to organize newsletter sending and its analysis. The data provided for the newsletter is stored on Buttondown servers in the USA. Emails sent via Buttondown contain a tracking pixel that connects to Buttondown's servers when opened, so it can be determined whether an email has been opened. Furthermore, we record which links in the newsletter are clicked. Opens and clicks can be attributed to individual subscribers. In addition, UTM parameters (utm_source, utm_medium, utm_campaign and utm_content) are appended to the links in the newsletter. These identify the newsletter and the respective issue so that visits to our website can be attributed to the newsletter; they do not identify individual subscribers. If you do not want the analysis by Buttondown, you can unsubscribe from the newsletter or inform us so that we do not use personal tracking. An unsubscribe link is included in every newsletter.
 
 **Legal Basis:** The legal basis for processing the data is Art. 6(1)(a) GDPR.
 
-**Recipients:** The recipient of the data is Clever Elements GmbH.
+**Recipients:** The recipient of the data is Buttondown, LLC.
 
-**Transfer to Third Countries:** No data transfer to third countries takes place.
+**Transfer to Third Countries:** The data is transferred to and processed in the USA. The transfer is based on the European Commission's Standard Contractual Clauses (Implementing Decision (EU) 2021/914, Module 2, controller to processor), which form part of the data processing agreement concluded with Buttondown. In addition, we base the transfer on your explicit consent under Art. 49(1)(a) GDPR.
 
-**Storage Duration:** The data stored with us for newsletter subscription is stored until unsubscription from the newsletter and deleted after unsubscription from both our servers and Clever Elements servers. Data stored with us for other reasons remains unaffected.
+**Storage Duration:** The data stored with us for newsletter subscription is stored until unsubscription from the newsletter and deleted after unsubscription from both our servers and Buttondown's servers. Data stored with us for other reasons remains unaffected.
 
 **Withdrawal:** You can withdraw your consent to data processing at any time for the future. The lawfulness of data processing carried out until withdrawal remains unaffected.
 
