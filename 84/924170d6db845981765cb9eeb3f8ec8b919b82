@@ -1,0 +1,21 @@
+content/newsletter.md
+  s_4934de311dcf29::t_7b05a0c91a4fac 10-11
+content/newsletter.en.md
+  s_4934de311dcf29::t_7b05a0c91a4fac 10-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "84924170d6db845981765cb9eeb3f8ec8b919b82",
+  "prompts": {},
+  "sessions": {
+    "s_4934de311dcf29": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "981d5849-eac3-48f5-a93f-ae02cdee9cb2",
+        "model": "claude-opus-5"
+      },
+      "human_author": "JuliDi <julian@systemscape.de>"
+    }
+  }
+}
