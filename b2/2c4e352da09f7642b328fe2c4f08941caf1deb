@@ -1,0 +1,61 @@
+templates/archive_2025.html
+  s_4934de311dcf29::t_5f19735f34f48e 28,33,38,43,48,53
+content/privacy.en.md
+  s_4934de311dcf29::t_188cf99a083d75 16,23,97,106
+templates/_base.html
+  s_4934de311dcf29::t_18ab54d9a08316 74,78
+  s_4934de311dcf29::t_5f19735f34f48e 2,18-19
+templates/components/contact.html
+  s_4934de311dcf29::t_e1c8f73e0fa6ee 1,3,8-10
+  s_4934de311dcf29::t_afbd00f3ce26b5 11
+  s_4934de311dcf29::t_7e12e7094e74c9 2,4-7
+content/newsletter.md
+  s_4934de311dcf29::t_188cf99a083d75 6
+templates/archive.html
+  s_4934de311dcf29::t_188cf99a083d75 13
+  s_4934de311dcf29::t_f0086e1dbb8957 21
+README.md
+  s_4934de311dcf29::t_b78be6fa81bb59 9
+.djlintrc
+  s_4934de311dcf29::t_53e637bc191492 6-7
+templates/components/media.html
+  s_4934de311dcf29::t_7e12e7094e74c9 1-3
+  s_4934de311dcf29::t_afbd00f3ce26b5 5
+  s_4934de311dcf29::t_e1c8f73e0fa6ee 4
+.github/workflows/lychee.yml
+  s_4934de311dcf29::t_b78be6fa81bb59 24
+templates/community.html
+  s_4934de311dcf29::t_5f19735f34f48e 9,26,40,54,68,76,86
+templates/archive_2025_en.html
+  s_4934de311dcf29::t_5f19735f34f48e 28,33,38,43,48,53
+templates/index_en.html
+  s_4934de311dcf29::t_3abb6a61bd1f44 474,612
+content/newsletter.en.md
+  s_4934de311dcf29::t_188cf99a083d75 6
+templates/components/layout.html
+  s_4934de311dcf29::t_aeef9098cf31e4 1,13,15,49,77-79,123,125,135,145
+  s_4934de311dcf29::t_e8297ae842337e 2,126
+  s_4934de311dcf29::t_5f19735f34f48e 14
+templates/ecosystem.html
+  s_4934de311dcf29::t_5f19735f34f48e 37
+content/privacy.md
+  s_4934de311dcf29::t_188cf99a083d75 16,23,97,106
+templates/index.html
+  s_4934de311dcf29::t_3abb6a61bd1f44 391,507
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "b22c4e352da09f7642b328fe2c4f08941caf1deb",
+  "prompts": {},
+  "sessions": {
+    "s_4934de311dcf29": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "981d5849-eac3-48f5-a93f-ae02cdee9cb2",
+        "model": "claude-opus-5"
+      },
+      "human_author": "JuliDi <julian@systemscape.de>"
+    }
+  }
+}
