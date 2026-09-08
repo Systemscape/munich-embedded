@@ -1,0 +1,16 @@
+{#- One talk card: the header is fixed, the body holds the speaker bio and the
+    abstract, which differ per talk. -#}
+{% component talk(title, kind, photo, speaker, id="", class="") %}
+    <div class="highlighted-grid-element bg-white{% if class %} {{ class }}{% endif %}"{% if id %} id="{{ id }}"{% endif %}>
+        <div class="text-center mb-4">
+            <img src="{{ photo }}" loading="lazy" alt="Picture of {{ speaker }}" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+            <h3 class="text-lg font-bold mb-2">{{ title }}</h3>
+            {% if kind == "lightning" %}
+                <span class="inline-block bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-sm font-medium">Lightning Talk (10 min)</span>
+            {% else %}
+                <span class="inline-block bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm font-medium">Technical Talk (25 min)</span>
+            {% endif %}
+        </div>
+        {{ body }}
+    </div>
+{% endcomponent talk %}

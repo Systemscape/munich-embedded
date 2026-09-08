@@ -1,0 +1,40 @@
+{#- One sponsor tile. The body carries the name so it can hold markup, such as
+    the line break in the Bavarian Chips Alliance entry. -#}
+{% component sponsor(url, logo, alt, tier, img_class="") %}
+    <a target="_blank" href="{{ url }}" class="block group">
+        <div class="highlighted-grid-element h-80 flex flex-col items-center justify-center">
+            <div class="w-64 h-64 mb-4 flex items-center justify-center">
+                <img alt="{{ alt }}" src="{{ logo }}"{% if img_class %} class="{{ img_class }}"{% endif %}>
+            </div>
+            <h4 class="text-lg font-semibold text-center group-hover:text-blue-600 transition-colors duration-300">
+                {{ body }}
+                <br>
+                ({{ tier }})
+            </h4>
+        </div>
+    </a>
+{% endcomponent sponsor %}
+
+{#- Each list is shared by the German and the English page of that year. -#}
+
+{% component sponsors.me2026(en: bool = false) %}
+    {% <sponsor url="https://www.rohde-schwarz.com/" logo="/sponsor_logos/rs.jpg" alt="Rohde&Schwarz logo" tier="Gold Sponsor"> %}Rohde & Schwarz{% </sponsor> %}
+    {% <sponsor url="https://modelwise.ai/" logo="/sponsor_logos/modelwise.png" alt="Modelwise logo" tier="Gold Sponsor"> %}Modelwise{% </sponsor> %}
+    {% <sponsor url="https://www.analog.com/" logo="/sponsor_logos/analog.svg" alt="Analog Devices logo" tier="Silver Sponsor"> %}Analog Devices{% </sponsor> %}
+    {% <sponsor url="https://www.ti.com/" logo="/sponsor_logos/ti.svg" alt="Texas Instruments logo" tier="Bronze Sponsor"> %}Texas Instruments{% </sponsor> %}
+    {% <sponsor url="https://aisler.net/" logo="/sponsor_logos/aisler.png" alt="Aisler logo" tier="Bronze Sponsor"> %}Aisler{% </sponsor> %}
+    {% <sponsor url={"https://www.microconsult.de/en/" if en else "https://www.microconsult.de/"} logo="/sponsor_logos/microconsult.svg" alt="MicroConsult logo" tier="Bronze Sponsor"> %}MicroConsult{% </sponsor> %}
+    {% <sponsor url="https://www.vde-bayern.de/de" logo="/sponsor_logos/vde-bayern.jpg" alt="VDE Bayern logo" tier="Partner"> %}VDE Bayern{% </sponsor> %}
+    {% <sponsor url="https://www.bayern-innovativ.de/leistungen/digitalisierung/bavarian-chips-alliance/" logo="/sponsor_logos/bavarian-chips-alliance.jpg" alt="Bavarian Chips Alliance @ Bayern Innovativ GmbH logo" tier="Partner" img_class="max-h-32 object-contain"> %}Bavarian Chips Alliance <br> @ Bayern Innovativ GmbH{% </sponsor> %}
+{% endcomponent sponsors.me2026 %}
+
+{% component sponsors.me2025() %}
+    {% <sponsor url="https://aisler.net/" logo="/sponsor_logos/aisler.png" alt="Aisler logo" tier="Gold Sponsor"> %}Aisler{% </sponsor> %}
+    {% <sponsor url="https://www.zuken.com/" logo="/sponsor_logos/zuken.png" alt="Zuken logo" tier="Gold Sponsor"> %}Zuken{% </sponsor> %}
+    {% <sponsor url="https://www.onmcu.com/" logo="/sponsor_logos/onmcu.svg" alt="OnMCU logo" tier="Gold Sponsor"> %}OnMCU{% </sponsor> %}
+    {% <sponsor url="https://www.rohde-schwarz.com/" logo="/sponsor_logos/rs.jpg" alt="Rohde&Schwarz logo" tier="Silver Sponsor"> %}Rohde & Schwarz{% </sponsor> %}
+    {% <sponsor url="https://www.infineon.com/" logo="/sponsor_logos/infineon.svg" alt="Infineon logo" tier="Silver Sponsor"> %}Infineon{% </sponsor> %}
+    {% <sponsor url="https://www.analog.com/" logo="/sponsor_logos/analog.svg" alt="Analog Devices logo" tier="Silver Sponsor"> %}Analog Devices{% </sponsor> %}
+    {% <sponsor url="https://www.ti.com/" logo="/sponsor_logos/ti.svg" alt="Texas Instruments logo" tier="Silver Sponsor"> %}Texas Instruments{% </sponsor> %}
+    {% <sponsor url="https://www.vde-bayern.de/de" logo="/sponsor_logos/vde-bayern.jpg" alt="VDE Bayern logo" tier="Partner"> %}VDE Bayern{% </sponsor> %}
+{% endcomponent sponsors.me2025 %}

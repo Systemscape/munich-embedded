@@ -1,0 +1,9 @@
+{#- The row of social icons in the header, used by both the desktop bar and the
+    mobile menu. -#}
+{% component social_links(prefix, lang) %}
+    <a href="{{ prefix }}/newsletter" title="{{ trans(key='newsletter_tooltip', lang=lang) }}" class="px-1 text-white hover:text-blue-200">{{ <icon.newsletter width="24" height="18" /> }}</a>
+    <a href="https://www.linkedin.com/showcase/munich-embedded" target="_blank" title="{{ trans(key='linkedin_tooltip', lang=lang) }}" class="px-1 text-white hover:text-blue-200">{{ <icon.linkedin width="20" height="20" /> }}</a>
+    <a href="https://github.com/munich-embedded/" target="_blank" title="{{ trans(key='github_tooltip', lang=lang) }}" class="px-1 text-white hover:text-blue-200">{{ <icon.github width="20" height="20" /> }}</a>
+    <a href="https://www.youtube.com/@MunichEmbedded" target="_blank" title="{{ trans(key='youtube_tooltip', lang=lang) }}" class="px-1 text-white hover:text-blue-200">{{ <icon.youtube width="24" height="24" /> }}</a>
+    <a href="https://matrix.to/#/#munich-embedded:matrix.org" target="_blank" title="{{ trans(key='matrix_tooltip', lang=lang) }}" class="px-1 text-white hover:text-blue-200">{{ <icon.matrix width="20" height="20" /> }}</a>
+{% endcomponent social_links %}

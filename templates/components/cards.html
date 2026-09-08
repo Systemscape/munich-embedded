@@ -1,0 +1,10 @@
+{#- Card linking to one of our community channels; the body is the description. -#}
+{% component community_card(icon, title, url, icon_height="48", external=true) %}
+    <a href="{{ url }}"{% if external %} target="_blank"{% endif %} class="block group">
+        <div class="highlighted-grid-element flex flex-col items-center justify-center py-10 h-full">
+            {{ <icon.social name={icon} width="48" height={icon_height} class="mb-4 text-gray-700 group-hover:text-blue-600 transition-colors duration-300" /> }}
+            <h3 class="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors duration-300">{{ title }}</h3>
+            <p class="text-gray-600 text-sm text-center">{{ body | trim }}</p>
+        </div>
+    </a>
+{% endcomponent community_card %}

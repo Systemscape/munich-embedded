@@ -9,9 +9,7 @@
         {% else %}
             {% set default_description = "Munich Embedded 2026 – Konferenz für Testing, Sicherheit und Zuverlässigkeit im Embedded-Bereich. 27. Oktober 2026 im WERK1, München. Vorträge, Lightning Talks und Austausch mit rund 100 Embedded-Experten." %}
         {% endif %}
-        <title>
-            {% block page_title %}Munich Embedded{% endblock %}
-        </title>
+        <title>{% block page_title %}Munich Embedded{% endblock %}</title>
         <meta name="description" content="{% block meta_description %}{{ default_description }}{% endblock %}">
 
         {% if current_path %}
