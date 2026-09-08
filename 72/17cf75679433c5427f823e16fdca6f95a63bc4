@@ -1,0 +1,29 @@
+static/js/pirsch-optout.js
+  s_4934de311dcf29::t_be1f1f44f7dc1b 1-49
+templates/_base.html
+  s_4934de311dcf29::t_313fa662c4807f 54
+templates/components/privacy.html
+  s_4934de311dcf29::t_313fa662c4807f 1-5
+content/privacy.md
+  s_4934de311dcf29::t_1678f28ed4d360 97
+  s_4934de311dcf29::t_d7a06bb735657c 59-63
+content/privacy.en.md
+  s_4934de311dcf29::t_1678f28ed4d360 97
+  s_4934de311dcf29::t_d7a06bb735657c 59-63
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "7217cf75679433c5427f823e16fdca6f95a63bc4",
+  "prompts": {},
+  "sessions": {
+    "s_4934de311dcf29": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "981d5849-eac3-48f5-a93f-ae02cdee9cb2",
+        "model": "claude-opus-5"
+      },
+      "human_author": "JuliDi <julian@systemscape.de>"
+    }
+  }
+}
