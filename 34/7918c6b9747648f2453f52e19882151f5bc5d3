@@ -1,0 +1,19 @@
+templates/ecosystem.html
+  s_4934de311dcf29::t_2d38f86e9c5b91 25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "347918c6b9747648f2453f52e19882151f5bc5d3",
+  "prompts": {},
+  "sessions": {
+    "s_4934de311dcf29": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "981d5849-eac3-48f5-a93f-ae02cdee9cb2",
+        "model": "unknown"
+      },
+      "human_author": "JuliDi <julian@systemscape.de>"
+    }
+  }
+}
