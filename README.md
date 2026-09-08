@@ -6,7 +6,7 @@ It is a static website, built with Zola and hosted at Cloudflare pages.
 
 ## Requirements
 
-- Static Site Generator: Zola v0.20.2 https://www.getzola.org/documentation/getting-started/installation
+- Static Site Generator: Zola v0.23.4 https://www.getzola.org/documentation/getting-started/installation
 - CSS Framework: tailwindcss v4.1.10 https://tailwindcss.com/docs/installation/tailwind-cli (can be installed via brew)
 - Optional: Just command runner https://github.com/casey/just
 - For formatting templates: djlint https://www.djlint.com (`brew install djlint`)

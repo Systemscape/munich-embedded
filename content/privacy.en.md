@@ -13,14 +13,14 @@ In the following, we would like to inform you about how we process your data.
 Systemscape GmbH\
 Bergmannstr. 12\
 80339 München\
-E-Mail: {{ email(email="munich-embedded@systemscape.de") }}
+E-Mail: {{ <email email="munich-embedded@systemscape.de" /> }}
 
 **Data Protection Officer:**\
 Joel Schulz-Andres\
 c/o Systemscape GmbH\
 Bergmannstr. 12\
 80339 München\
-E-Mail: {{ email(email="munich-embedded@systemscape.de") }}
+E-Mail: {{ <email email="munich-embedded@systemscape.de" /> }}
 
 ## Hosting and Content Delivery Network (CDN)
 
@@ -94,7 +94,7 @@ When you subscribe to our newsletter, your information from the registration for
 
 **Withdrawal:** You can withdraw your consent to data processing at any time for the future. The lawfulness of data processing carried out until withdrawal remains unaffected.
 
-{% raw() %}
+{% raw %}
 <div class="mt-8 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-sm">
     <p class="text-gray-700">
         <strong>Hinweis:</strong> Die englische Version der Datenschutzerklärung dient lediglich der Information. Im Zweifel ist die deutsche Version maßgeblich.
@@ -103,4 +103,4 @@ When you subscribe to our newsletter, your information from the registration for
         <strong>Note:</strong> The English version of the privacy policy is for information purposes only. In case of doubt, the German version is authoritative.
     </p>
 </div>
-{% end %}
+{% endraw %}

@@ -34,7 +34,7 @@
                                         {% endif %}
                                         <div class="mt-4 text-blue-600 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
                                             <span>
-                                                {% if current_path is starting_with('/en') %}
+                                                {% if current_path is starting_with(pat='/en') %}
                                                     Visit Website
                                                 {% else %}
                                                     Webseite besuchen

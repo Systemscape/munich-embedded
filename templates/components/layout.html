@@ -1,21 +1,5 @@
-{% macro email(email) %}
-    {%- set base64_email = email -%}
-    <a class="js m-protected-mod" href="#{{ base64_email | base64_encode }}" target="_blank" title="Mail"><span class="js m-protected-mod-innertext">#{{ base64_email | base64_encode }}</span></a>
-    {# After changing this you need to run `npm run noswitchernosearch` #}
-{% endmacro email %}
-
-{% macro email_button(email,text,classes) %}
-    {%- set base64_email = email -%}
-    <a class="js m-protected-mod {{ classes }}" href="#{{ base64_email | base64_encode }}" target="_blank" title="Mail">{{ text }}</a>
-    {# After changing this you need to run `npm run noswitchernosearch` #}
-{% endmacro email %}
-
-{% macro navigation(page_url, page_title, lang) %}
-    {% if page_url is starting_with('/en') %}
-        {% set_global prefix = "/en" %}
-    {% else %}
-        {% set_global prefix = "" %}
-    {% endif %}
+{% component navigation(page_url, lang) %}
+    {% set prefix = "/en" if page_url is starting_with(pat='/en') else "" %}
     <header class="bg-blue-900 text-white shadow-md">
         <nav class="container mx-auto px-8 py-3">
             <div class="flex justify-between items-center">
@@ -26,9 +10,9 @@
                     <!-- Desktop nav links -->
                     <div class="hidden lg:flex ms-4 items-center gap-4">
                         <a href="{{ prefix }}/" class="text-white hover:text-blue-200 font-medium{% if page_url == '/' or page_url == '/en/' %} underline underline-offset-4{% endif %}">{{ trans(key="conference", lang=lang) }}</a>
-                        <a href="{{ prefix }}/archive/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with('/archive') or page_url is starting_with('/en/archive') %} underline underline-offset-4{% endif %}">{{ trans(key="archive", lang=lang) }}</a>
-                        <a href="{{ prefix }}/community/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with('/community') or page_url is starting_with('/en/community') %} underline underline-offset-4{% endif %}">{{ trans(key="community", lang=lang) }}</a>
-                        <a href="{{ prefix }}/ecosystem/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with('/ecosystem') or page_url is starting_with('/en/ecosystem') %} underline underline-offset-4{% endif %}">{{ trans(key="ecosystem", lang=lang) }}</a>
+                        <a href="{{ prefix }}/archive/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with(pat='/archive') or page_url is starting_with(pat='/en/archive') %} underline underline-offset-4{% endif %}">{{ trans(key="archive", lang=lang) }}</a>
+                        <a href="{{ prefix }}/community/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with(pat='/community') or page_url is starting_with(pat='/en/community') %} underline underline-offset-4{% endif %}">{{ trans(key="community", lang=lang) }}</a>
+                        <a href="{{ prefix }}/ecosystem/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with(pat='/ecosystem') or page_url is starting_with(pat='/en/ecosystem') %} underline underline-offset-4{% endif %}">{{ trans(key="ecosystem", lang=lang) }}</a>
                     </div>
                 </div>
                 <div class="flex items-center gap-3">
@@ -62,7 +46,7 @@
                     </div>
                     <!-- Language toggle -->
                     <span class="pl-2">
-                        {% if page_url is starting_with('/en') %}
+                        {% if page_url is starting_with(pat='/en') %}
                             <a href="{{ page_url | replace(from='/en/', to='/') | replace(from='/en', to='/') }}" class="text-white hover:text-blue-200">DE</a>
                             <span class="text-gray-400">|</span>
                             <a href="{{ page_url }}" class="text-white font-bold underline">EN</a>
@@ -90,9 +74,9 @@
             <div id="nav-menu" class="hidden lg:hidden mt-4 pb-2 border-t border-blue-800 pt-4">
                 <div class="flex flex-col gap-3">
                     <a href="{{ prefix }}/" class="text-white hover:text-blue-200 font-medium{% if page_url == '/' or page_url == '/en/' %} underline underline-offset-4{% endif %}">{{ trans(key="conference", lang=lang) }}</a>
-                    <a href="{{ prefix }}/archive/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with('/archive') or page_url is starting_with('/en/archive') %} underline underline-offset-4{% endif %}">{{ trans(key="archive", lang=lang) }}</a>
-                    <a href="{{ prefix }}/community/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with('/community') or page_url is starting_with('/en/community') %} underline underline-offset-4{% endif %}">{{ trans(key="community", lang=lang) }}</a>
-                    <a href="{{ prefix }}/ecosystem/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with('/ecosystem') or page_url is starting_with('/en/ecosystem') %} underline underline-offset-4{% endif %}">{{ trans(key="ecosystem", lang=lang) }}</a>
+                    <a href="{{ prefix }}/archive/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with(pat='/archive') or page_url is starting_with(pat='/en/archive') %} underline underline-offset-4{% endif %}">{{ trans(key="archive", lang=lang) }}</a>
+                    <a href="{{ prefix }}/community/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with(pat='/community') or page_url is starting_with(pat='/en/community') %} underline underline-offset-4{% endif %}">{{ trans(key="community", lang=lang) }}</a>
+                    <a href="{{ prefix }}/ecosystem/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with(pat='/ecosystem') or page_url is starting_with(pat='/en/ecosystem') %} underline underline-offset-4{% endif %}">{{ trans(key="ecosystem", lang=lang) }}</a>
                     <div class="flex items-center gap-3 pt-2 border-t border-blue-800">
                         <a href="{{ prefix }}/newsletter" title="{{ trans(key="newsletter_tooltip", lang=lang) }}" class="px-1 text-white hover:text-blue-200">
                             <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
@@ -136,14 +120,10 @@
         });
         </script>
     </header>
-{% endmacro navigation %}
+{% endcomponent navigation %}
 
-{% macro footer(page_url, lang) %}
-    {% if page_url is starting_with('/en') %}
-        {% set_global footer_prefix = "/en" %}
-    {% else %}
-        {% set_global footer_prefix = "" %}
-    {% endif %}
+{% component footer(page_url, lang) %}
+    {% set footer_prefix = "/en" if page_url is starting_with(pat='/en') else "" %}
     <footer class="bg-blue-900 text-white py-8 mt-auto">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
@@ -152,7 +132,7 @@
                 </div>
                 <div class="mt-4 md:mt-0">
                     <a href="{{ footer_prefix }}/newsletter" class="text-white hover:text-blue-200">{{ trans(key="newsletter", lang=lang) }}</a>
-                    {% if page_url is starting_with('/en') %}
+                    {% if page_url is starting_with(pat='/en') %}
                         <a href="https://www.systemscape.com/contact/" target="_blank" class="text-white hover:text-blue-200 mx-3">{{ trans(key="imprint", lang=lang) }}</a>
                     {% else %}
                         <a href="https://www.systemscape.com/de/contact/" target="_blank" class="text-white hover:text-blue-200 mx-3">{{ trans(key="imprint", lang=lang) }}</a>
@@ -162,4 +142,4 @@
             </div>
         </div>
     </footer>
-{% endmacro footer %}
+{% endcomponent footer %}

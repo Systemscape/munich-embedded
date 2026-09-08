@@ -1,6 +1,5 @@
-{% import "_macros.html" as macros %}
 <!DOCTYPE html>
-<html lang="{% if current_path and current_path is starting_with('/en/') %}en{% else %}de{% endif %}" class="bg-gray-50">
+<html lang="{% if current_path and current_path is starting_with(pat='/en/') %}en{% else %}de{% endif %}" class="bg-gray-50">
 
     <head>
         <meta charset="UTF-8">
@@ -16,8 +15,8 @@
         <meta name="description" content="{% block meta_description %}{{ default_description }}{% endblock %}">
 
         {% if current_path %}
-            {% if current_path is starting_with("/en/") %}
-                {% set de_path = current_path | trim_start_matches(pat="/en") %}
+            {% if current_path is starting_with(pat="/en/") %}
+                {% set de_path = current_path[3:] %}
             {% else %}
                 {% set de_path = current_path %}
             {% endif %}
@@ -72,11 +71,11 @@
     </head>
 
     <body class="min-h-screen flex flex-col text-black">
-        {{ macros::navigation(page_url=current_path, page_title=page.title | default(value=section.title) , lang=lang) }}
+        {{ <navigation page_url={current_path} lang={lang} /> }}
 
         {% block content %}{% endblock %}
 
-        {{ macros::footer(page_url=current_path, lang=lang) }}
+        {{ <footer page_url={current_path} lang={lang} /> }}
     </body>
 
 </html>
