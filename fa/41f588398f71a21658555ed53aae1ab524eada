@@ -1,0 +1,28 @@
+templates/newsletter.html
+  s_4934de311dcf29::t_f77679cb5f7b1d 5-6,8-9
+content/newsletter.md
+  s_4934de311dcf29::t_a2a3b4b0f0dbd3 17
+  s_4934de311dcf29::t_80f7b0e8b4f1e4 6-16,18-26,28-41
+content/newsletter.en.md
+  s_4934de311dcf29::t_a2a3b4b0f0dbd3 17
+  s_4934de311dcf29::t_eae523b9515a13 6-16,18-26,28-41
+static/css/style.css
+  s_4934de311dcf29::t_eae523b9515a13 9,277-279,292-294,301-303,459-461,757-762,805-806,907-908
+  s_4934de311dcf29::t_ed0224e5e97610 909
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "fa41f588398f71a21658555ed53aae1ab524eada",
+  "prompts": {},
+  "sessions": {
+    "s_4934de311dcf29": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "981d5849-eac3-48f5-a93f-ae02cdee9cb2",
+        "model": "claude-opus-5"
+      },
+      "human_author": "JuliDi <julian@systemscape.de>"
+    }
+  }
+}
