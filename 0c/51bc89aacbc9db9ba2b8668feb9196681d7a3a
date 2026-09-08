@@ -1,0 +1,25 @@
+content/privacy.md
+  s_4934de311dcf29::t_f6182016fa3aef 93
+  s_4934de311dcf29::t_c7af7728af8f7e 91,97,99,101
+  s_4934de311dcf29::t_5e0d67e4885261 53-60
+content/privacy.en.md
+  s_4934de311dcf29::t_5e0d67e4885261 53-60
+  s_4934de311dcf29::t_f6182016fa3aef 93
+  s_4934de311dcf29::t_c7af7728af8f7e 91,97,99,101
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "0c51bc89aacbc9db9ba2b8668feb9196681d7a3a",
+  "prompts": {},
+  "sessions": {
+    "s_4934de311dcf29": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "981d5849-eac3-48f5-a93f-ae02cdee9cb2",
+        "model": "claude-opus-5"
+      },
+      "human_author": "JuliDi <julian@systemscape.de>"
+    }
+  }
+}
