@@ -3,5 +3,6 @@
     "indent": 4,
     "max_line_length": 160,
     "max_attribute_length": 500,
-    "preserve_blank_lines": true
+    "preserve_blank_lines": true,
+    "custom_blocks": "component"
 }

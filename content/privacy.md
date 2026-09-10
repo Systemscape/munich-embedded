@@ -13,14 +13,14 @@ Im Folgenden möchten wir Sie darüber informieren, wie wir mit Ihren Daten umge
 Systemscape GmbH\
 Bergmannstr. 12\
 80339 München\
-E-Mail: {{ email(email="munich-embedded@systemscape.de") }}
+E-Mail: {{ <email email="munich-embedded@systemscape.de" /> }}
 
 **Datenschutzbeauftragter:**\
 Joel Schulz-Andres\
 c/o Systemscape GmbH\
 Bergmannstr. 12\
 80339 München\
-E-Mail: {{ email(email="munich-embedded@systemscape.de") }}
+E-Mail: {{ <email email="munich-embedded@systemscape.de" /> }}
 
 ## Hosting und Content Delivery Network (CDN)
 
@@ -49,6 +49,18 @@ Die Daten werden gelöscht, sobald der Zweck der Verarbeitung entfällt. Persone
 Die Verarbeitung der in diesem Abschnitt genannten Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Die Funktionalität der Website ist ohne die Verarbeitung nicht gewährleistet.
 
 Cloudflare hat Compliance-Maßnahmen für internationale Datenübermittlungen umgesetzt. Diese gelten für alle weltweiten Aktivitäten, bei denen Cloudflare personenbezogene Daten von natürlichen Personen in der EU verarbeitet. Diese Maßnahmen basieren auf den EU-Standardvertragsklauseln (SCCs) und der Teilnahme am EU-US Data Privacy Framework. Weitere Informationen finden Sie unter: [https://www.cloudflare.com/cloudflare_customer_SCCs.pdf](https://www.cloudflare.com/cloudflare_customer_SCCs.pdf)
+
+## Web-Analyse mit Pirsch Analytics
+
+Für die Reichweitenmessung verwenden wir Pirsch Analytics. Anbieter ist die Emvi Software GmbH, Nickelstraße 1b, 33378 Rheda-Wiedenbrück, Deutschland. Die Daten werden auf Servern in Deutschland verarbeitet, eine Übermittlung in Drittländer findet nicht statt. Das Analyse-Skript und die Messanfragen werden über einen von uns betriebenen Cloudflare Worker ausgeliefert.
+
+Pirsch Analytics ist eine cookiefreie Web-Analyse-Software, die nach dem Grundsatz „Privacy by Design“ entwickelt wurde. Um Besucherströme auszuwerten, erzeugt Pirsch Analytics beim Eingang der Seitenanfrage mit einem Hash-Verfahren eine 16-stellige Zahl als Besucher-ID. Eingangswerte sind die IP-Adresse, der User-Agent, das Datum und ein Salt. Die IP-Adresse der Besucher wird weder ganz noch teilweise gespeichert und durch den Hash vollständig und nicht umkehrbar anonymisiert. Durch die Einbeziehung des Datums und die Verwendung eines eigenen Salts je Website ist sichergestellt, dass Besucher nicht länger als 24 Stunden wiedererkannt und nicht über mehrere Websites hinweg verfolgt werden können. Eine grobe Lokalisierung (Land/Stadt) erfolgt über eine lokal eingebundene Datenbank.
+
+Die Verarbeitung erfolgt auf Grundlage unseres berechtigten Interesses gem. Art. 6 Abs. 1 lit. f DSGVO an einer statistischen Auswertung der Nutzung unserer Website. Weitere Informationen zum Datenschutz bei Pirsch Analytics finden Sie unter: [https://pirsch.io/privacy](https://pirsch.io/privacy)
+
+Sie haben das Recht, der Verarbeitung zu widersprechen. Mit der folgenden Schaltfläche können Sie die Messung abschalten. Der Widerspruch wird lokal in Ihrem Browser gespeichert und wirkt deshalb nur für diesen Browser auf diesem Gerät. Er geht verloren, wenn Sie die Websitedaten löschen, und muss in anderen Browsern oder auf anderen Geräten erneut erklärt werden.
+
+{{ <pirsch_optout disable_label="Messung abschalten" enable_label="Messung wieder einschalten" on_text="Die Messung ist für diesen Browser aktiv." off_text="Die Messung ist für diesen Browser abgeschaltet." error_text="Ihr Browser lässt keine lokale Speicherung zu. Damit kann der Widerspruch hier nicht gespeichert werden; es findet aber ohnehin keine Messung statt, solange Sie Websitedaten blockieren." /> }}
 
 ## Kartendarstellung mit OpenStreetMap
 
@@ -80,21 +92,21 @@ Wir gehen davon aus, dass diese Ausnahme für Cloudflare Pages gilt.
 
 Wenn Sie unseren Newsletter abonnieren, werden Ihre Angaben aus dem Anmeldeformular an den Verantwortlichen für die Datenverarbeitung gesendet. Die Registrierung für den Newsletter geschieht über ein Double-Opt-in-Verfahren, was bedeutet, dass Sie nach der Anmeldung eine E-Mail zur Bestätigung Ihrer Registrierung erhalten. Diese Bestätigung ist erforderlich, um die Anmeldung mit einer fremden E-Mail-Adresse zu verhindern. Zum Zeitpunkt der Newsletter-Anmeldung werden die IP-Adresse und der Zeitpunkt der Anmeldung gespeichert, um einen möglichen Missbrauch zu verhindern. Ihre Daten werden nicht an Dritte weitergegeben, es sei denn, es besteht eine gesetzliche Pflicht zur Weitergabe. Die Daten dienen ausschließlich dem Versand des Newsletters. Das Abonnement kann jederzeit beendet werden, und die Einwilligung zur Speicherung der Daten kann widerrufen werden. Hierfür gibt es in jedem Newsletter einen entsprechenden Abmeldelink. Die Rechtsgrundlage für die Datenverarbeitung nach der Anmeldung zum Newsletter basiert auf Ihrer Zustimmung gemäß Art. 6 Abs. 1 lit. a) DSGVO und für den Versand des Newsletters im Kontext des Verkaufs von Waren oder Dienstleistungen auf § 7 Abs. 3 UWG.
 
-### Verwendung von Clever Elements
+### Verwendung von Buttondown
 
-**Zweck und Beschreibung:** Clever Elements wird für das Versenden von Newslettern verwendet. Der Dienstleister ist die Clever Elements GmbH, Lohmühlenstr. 65, 12435 Berlin, Deutschland. Clever Elements wird eingesetzt, um den Newsletter-Versand und dessen Analyse zu organisieren. Die für den Newsletter angegebenen Daten werden auf Servern von Clever Elements in Deutschland gespeichert. Falls Sie die Analyse durch Clever Elements nicht wünschen, können Sie den Newsletter abbestellen oder uns informieren, damit wir kein persönliches Tracking verwenden. Ein Abmeldelink ist in jedem Newsletter enthalten. Die über Clever Elements gesendeten E-Mails enthalten ein Tracking-Pixel, das sich beim Öffnen mit den Servern verbindet, sodass festgestellt werden kann, ob eine E-Mail geöffnet wurde. Darüber hinaus können wir ermitteln, welche Links im Newsletter angeklickt werden. Links können als Tracking-Links konfiguriert sein, um Klicks zu erfassen.
+**Zweck und Beschreibung:** Für den Versand des Newsletters verwenden wir Buttondown. Der Dienstleister ist die Buttondown, LLC, 406 W Franklin St. #201, Richmond, VA 23221, USA. Buttondown wird eingesetzt, um den Newsletter-Versand und dessen Analyse zu organisieren. Die für den Newsletter angegebenen Daten werden auf Servern von Buttondown in den USA gespeichert. Die über Buttondown versendeten E-Mails enthalten ein Tracking-Pixel, das sich beim Öffnen mit den Servern von Buttondown verbindet, sodass festgestellt werden kann, ob eine E-Mail geöffnet wurde. Darüber hinaus erfassen wir, welche Links im Newsletter angeklickt werden. Öffnungen und Klicks können einzelnen Abonnenten zugeordnet werden. Zusätzlich werden den Links im Newsletter UTM-Parameter angehängt (utm_source, utm_medium, utm_campaign und utm_content). Diese kennzeichnen den Newsletter und die jeweilige Ausgabe, damit Zugriffe auf unsere Website dem Newsletter zugeordnet werden können; einzelne Abonnenten werden dadurch nicht identifiziert. Die Auswertung ist Bestandteil des Newsletter-Versands und lässt sich nicht für einzelne Abonnenten abschalten. Wenn Sie sie nicht wünschen, können Sie den Newsletter abbestellen. Ein Abmeldelink ist in jedem Newsletter enthalten.
 
 **Rechtsgrundlage:** Die rechtliche Basis für die Verarbeitung der Daten liegt in Art. 6 Abs. 1 lit. a) DSGVO.
 
-**Empfänger:** Der Empfänger der Daten ist die Clever Elements GmbH.
+**Empfänger:** Der Empfänger der Daten ist die Buttondown, LLC.
 
-**Übermittlung in Drittländer:** Es findet keine Datenübermittlung in Drittländer statt.
+**Übermittlung in Drittländer:** Die Daten werden in die USA übermittelt und dort verarbeitet. Grundlage der Übermittlung sind die Standardvertragsklauseln der EU-Kommission (Durchführungsbeschluss (EU) 2021/914, Modul 2 – Verantwortlicher an Auftragsverarbeiter), die Bestandteil des mit Buttondown geschlossenen Auftragsverarbeitungsvertrags sind. Ergänzend stützen wir die Übermittlung auf Ihre ausdrückliche Einwilligung nach Art. 49 Abs. 1 lit. a) DSGVO.
 
-**Speicherdauer:** Die für den Newsletter-Bezug bei uns hinterlegten Daten werden bis zur Abmeldung aus dem Newsletter gespeichert und nach dem Abbestellen sowohl von unseren als auch von den Servern von Clever Elements gelöscht. Daten, die aus anderen Gründen bei uns gespeichert sind, bleiben hiervon unberührt.
+**Speicherdauer:** Die für den Newsletter-Bezug bei uns hinterlegten Daten werden bis zur Abmeldung aus dem Newsletter gespeichert und nach dem Abbestellen sowohl von unseren als auch von den Servern von Buttondown gelöscht. Daten, die aus anderen Gründen bei uns gespeichert sind, bleiben hiervon unberührt.
 
 **Widerruf:** Sie können Ihre Zustimmung zur Datenverarbeitung jederzeit für die Zukunft widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt unberührt.
 
-{% raw() %}
+{% raw %}
 <div class="mt-8 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-sm">
     <p class="text-gray-700">
         <strong>Hinweis:</strong> Die englische Version der Datenschutzerklärung dient lediglich der Information. Im Zweifel ist die deutsche Version maßgeblich.
@@ -103,4 +115,4 @@ Wenn Sie unseren Newsletter abonnieren, werden Ihre Angaben aus dem Anmeldeformu
         <strong>Note:</strong> The English version of the privacy policy is for information purposes only. In case of doubt, the German version is authoritative.
     </p>
 </div>
-{% end %}
+{% endraw %}

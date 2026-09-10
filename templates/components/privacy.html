@@ -1,0 +1,5 @@
+{#- Opt-out switch for Pirsch Analytics, driven by static/js/pirsch-optout.js.
+    Called from markdown, so the output must stay on one line. -#}
+{# djlint:off #}
+{% component pirsch_optout(disable_label, enable_label, on_text, off_text, error_text) %}<div class="mt-6" data-pirsch-optout data-disable-label="{{ disable_label }}" data-enable-label="{{ enable_label }}" data-on-text="{{ on_text }}" data-off-text="{{ off_text }}" data-error-text="{{ error_text }}"><button type="button" class="blue-button cursor-pointer">{{ disable_label }}</button><p class="mt-2 text-sm text-gray-600">{{ on_text }}</p></div>{% endcomponent pirsch_optout %}
+{# djlint:on #}

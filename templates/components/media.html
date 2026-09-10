@@ -1,0 +1,5 @@
+{#- Called from markdown, so the output must stay on a single line; see the
+    note in components/contact.html. -#}
+{# djlint:off #}
+{% component iframe(src, scrolling="yes", class="w-full border-0", style="height: 600px; min-height: 600px;", frameborder="no") %}<iframe scrolling="{{ scrolling }}" class="{{ class }}" style="{{ style }}" frameborder="{{ frameborder }}" src="{{ src }}"></iframe>{% endcomponent iframe %}
+{# djlint:on #}

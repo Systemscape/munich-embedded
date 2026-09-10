@@ -10,7 +10,7 @@
                 {% for page in section.pages %}
                     <a href="{{ page.permalink }}" class="block group">
                         <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:border-orange-500 transform hover:-translate-y-1 transition-all duration-300">
-                            {% if page.extra.thumbnail %}
+                            {% if page.extra?.thumbnail %}
                                 {% set thumb = resize_image(path=page.extra.thumbnail, width=600, height=340, op="fill", quality=80) %}
                                 <div class="overflow-hidden">
                                     <img src="{{ thumb.url }}" alt="{{ page.title }}" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
@@ -18,7 +18,7 @@
                             {% endif %}
                             <div class="p-6">
                                 <h3 class="text-xl font-bold group-hover:text-orange-600 transition-colors duration-300 mt-2">{{ page.title }}</h3>
-                                {% if page.extra.subtitle %}<p class="text-gray-500 mt-1">{{ page.extra.subtitle }}</p>{% endif %}
+                                {% if page.extra?.subtitle %}<p class="text-gray-500 mt-1">{{ page.extra.subtitle }}</p>{% endif %}
                             </div>
                         </div>
                     </a>

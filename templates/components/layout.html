@@ -1,0 +1,97 @@
+{% component navigation(page_url, lang) %}
+    {% set prefix = "/en" if page_url is starting_with(pat='/en') else "" %}
+    <header class="bg-blue-900 text-white shadow-md">
+        <nav class="container mx-auto px-8 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-6">
+                    <h1 class="mb-1 mt-1 mr-2 leading-0">
+                        <a href="{{ prefix }}/" class="text-white text-2xl lg:text-3xl font-extrabold">Munich Embedded</a>
+                    </h1>
+                    <!-- Desktop nav links -->
+                    <div class="hidden lg:flex ms-4 items-center gap-4">
+                        <a href="{{ prefix }}/" class="text-white hover:text-blue-200 font-medium{% if page_url == '/' or page_url == '/en/' %} underline underline-offset-4{% endif %}">{{ trans(key="conference", lang=lang) }}</a>
+                        <a href="{{ prefix }}/archive/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with(pat='/archive') or page_url is starting_with(pat='/en/archive') %} underline underline-offset-4{% endif %}">{{ trans(key="archive", lang=lang) }}</a>
+                        <a href="{{ prefix }}/community/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with(pat='/community') or page_url is starting_with(pat='/en/community') %} underline underline-offset-4{% endif %}">{{ trans(key="community", lang=lang) }}</a>
+                        <a href="{{ prefix }}/ecosystem/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with(pat='/ecosystem') or page_url is starting_with(pat='/en/ecosystem') %} underline underline-offset-4{% endif %}">{{ trans(key="ecosystem", lang=lang) }}</a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <!-- Social icons (hidden on mobile, shown in hamburger menu) -->
+                    <div class="hidden lg:flex items-center gap-3">
+                        {{ <social_links prefix={prefix} lang={lang} /> }}
+                    </div>
+                    <!-- Language toggle -->
+                    <span class="pl-2">
+                        {% if page_url is starting_with(pat='/en') %}
+                            <a href="{{ page_url | replace(from='/en/', to='/') | replace(from='/en', to='/') }}" class="text-white hover:text-blue-200">DE</a>
+                            <span class="text-gray-400">|</span>
+                            <a href="{{ page_url }}" class="text-white font-bold underline">EN</a>
+                        {% else %}
+                            <a href="{{ page_url }}" class="text-white font-bold underline">DE</a>
+                            <span class="text-gray-400">|</span>
+                            <a href="/en{{ page_url }}" class="text-white hover:text-blue-200">EN</a>
+                        {% endif %}
+                    </span>
+                    <!-- Hamburger button (mobile only) -->
+                    <button id="nav-toggle" class="lg:hidden p-2 text-white hover:text-blue-200" aria-label="Menu" aria-expanded="false">
+                        <svg id="nav-open-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                        <svg id="nav-close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div id="nav-menu" class="hidden lg:hidden mt-4 pb-2 border-t border-blue-800 pt-4">
+                <div class="flex flex-col gap-3">
+                    <a href="{{ prefix }}/" class="text-white hover:text-blue-200 font-medium{% if page_url == '/' or page_url == '/en/' %} underline underline-offset-4{% endif %}">{{ trans(key="conference", lang=lang) }}</a>
+                    <a href="{{ prefix }}/archive/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with(pat='/archive') or page_url is starting_with(pat='/en/archive') %} underline underline-offset-4{% endif %}">{{ trans(key="archive", lang=lang) }}</a>
+                    <a href="{{ prefix }}/community/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with(pat='/community') or page_url is starting_with(pat='/en/community') %} underline underline-offset-4{% endif %}">{{ trans(key="community", lang=lang) }}</a>
+                    <a href="{{ prefix }}/ecosystem/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with(pat='/ecosystem') or page_url is starting_with(pat='/en/ecosystem') %} underline underline-offset-4{% endif %}">{{ trans(key="ecosystem", lang=lang) }}</a>
+                    <div class="flex items-center gap-3 pt-2 border-t border-blue-800">
+                        {{ <social_links prefix={prefix} lang={lang} /> }}
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <script>
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('nav-menu');
+            var openIcon = document.getElementById('nav-open-icon');
+            var closeIcon = document.getElementById('nav-close-icon');
+            var expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !expanded);
+            menu.classList.toggle('hidden');
+            openIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+        </script>
+    </header>
+{% endcomponent navigation %}
+
+{% component footer(page_url, lang) %}
+    {% set footer_prefix = "/en" if page_url is starting_with(pat='/en') else "" %}
+    <footer class="bg-blue-900 text-white py-8 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div>
+                    <p>&copy; 2026 Munich Embedded. {{ trans(key="all_rights_reserved", lang=lang) }}</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <a href="{{ footer_prefix }}/newsletter" class="text-white hover:text-blue-200">{{ trans(key="newsletter", lang=lang) }}</a>
+                    {% if page_url is starting_with(pat='/en') %}
+                        <a href="https://www.systemscape.com/contact/" target="_blank" class="text-white hover:text-blue-200 mx-3">{{ trans(key="imprint", lang=lang) }}</a>
+                    {% else %}
+                        <a href="https://www.systemscape.com/de/contact/" target="_blank" class="text-white hover:text-blue-200 mx-3">{{ trans(key="imprint", lang=lang) }}</a>
+                    {% endif %}
+                    <a href="{{ footer_prefix }}/privacy" target="_blank" class="text-white hover:text-blue-200">{{ trans(key="privacy_policy", lang=lang) }}</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endcomponent footer %}

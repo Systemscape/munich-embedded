@@ -1,0 +1,11 @@
+{#- Mail addresses are base64-encoded here; static/js/email-mod.js decodes them
+    at runtime. After changing these, run `npm run noswitchernosearch`.
+
+    Called from markdown, where component output is re-parsed: each component
+    must emit a single line, because an indented one becomes a code block.
+    djlint is turned off so it cannot re-wrap them. -#}
+{# djlint:off #}
+{% component email(email) %}<a class="js m-protected-mod" href="#{{ email | base64_encode }}" target="_blank" title="Mail"><span class="js m-protected-mod-innertext">#{{ email | base64_encode }}</span></a>{% endcomponent email %}
+
+{% component email_button(email, text, classes) %}<a class="js m-protected-mod {{ classes }}" href="#{{ email | base64_encode }}" target="_blank" title="Mail">{{ text }}</a>{% endcomponent email_button %}
+{# djlint:on #}

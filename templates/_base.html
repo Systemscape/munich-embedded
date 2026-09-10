@@ -1,6 +1,5 @@
-{% import "_macros.html" as macros %}
 <!DOCTYPE html>
-<html lang="{% if current_path and current_path is starting_with('/en/') %}en{% else %}de{% endif %}" class="bg-gray-50">
+<html lang="{% if current_path and current_path is starting_with(pat='/en/') %}en{% else %}de{% endif %}" class="bg-gray-50">
 
     <head>
         <meta charset="UTF-8">
@@ -10,14 +9,12 @@
         {% else %}
             {% set default_description = "Munich Embedded 2026 – Konferenz für Testing, Sicherheit und Zuverlässigkeit im Embedded-Bereich. 27. Oktober 2026 im WERK1, München. Vorträge, Lightning Talks und Austausch mit rund 100 Embedded-Experten." %}
         {% endif %}
-        <title>
-            {% block page_title %}Munich Embedded{% endblock %}
-        </title>
+        <title>{% block page_title %}Munich Embedded{% endblock %}</title>
         <meta name="description" content="{% block meta_description %}{{ default_description }}{% endblock %}">
 
         {% if current_path %}
-            {% if current_path is starting_with("/en/") %}
-                {% set de_path = current_path | trim_start_matches(pat="/en") %}
+            {% if current_path is starting_with(pat="/en/") %}
+                {% set de_path = current_path[3:] %}
             {% else %}
                 {% set de_path = current_path %}
             {% endif %}
@@ -54,6 +51,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
         <script defer src="/js/email-mod.js" integrity="sha384-{{ get_hash(path='js/email-mod.js', sha_type=384, base64=true) | safe }}"></script>
+        <script defer src="/js/pirsch-optout.js" integrity="sha384-{{ get_hash(path='js/pirsch-optout.js', sha_type=384, base64=true) | safe }}"></script>
         <script defer src="https://pirsch.joel-1a0.workers.dev/static/files/pa.js" id="pianjs" data-hit-endpoint="https://pirsch.joel-1a0.workers.dev/p/pv" data-event-endpoint="https://pirsch.joel-1a0.workers.dev/p/e" data-session-endpoint="https://pirsch.joel-1a0.workers.dev/p/s"></script>
         <script type="application/ld+json">
           {
@@ -72,11 +70,11 @@
     </head>
 
     <body class="min-h-screen flex flex-col text-black">
-        {{ macros::navigation(page_url=current_path, page_title=page.title | default(value=section.title) , lang=lang) }}
+        {{ <navigation page_url={current_path} lang={lang} /> }}
 
         {% block content %}{% endblock %}
 
-        {{ macros::footer(page_url=current_path, lang=lang) }}
+        {{ <footer page_url={current_path} lang={lang} /> }}
     </body>
 
 </html>
